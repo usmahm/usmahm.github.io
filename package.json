@@ -1,0 +1,14 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "Ahmad Usman Personal Site",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/styles.css -wr"
+  },
+  "author": "Ahmad Usman",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

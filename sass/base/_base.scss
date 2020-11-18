@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+}
+
+html {
+    font-size: 10px;
+    // text-decoration: none;
+    // color: inherit;
+}
+
+body {
+    position: relative;
+    background-color: #25262A;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+a {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}

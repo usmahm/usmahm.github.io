@@ -1,7 +1,8 @@
 .main-header {
   position: absolute;
-  margin-top: 1rem;
+  margin-top: 2rem;
     margin-left: 1rem;
+    z-index: 1000;
 
   &__logo {
     width: 7rem;

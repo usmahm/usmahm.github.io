@@ -86,7 +86,7 @@ h2 {
   border-radius: 4px; }
 
 .u-margin-top {
-  margin-top: 2.8rem; }
+  margin-top: 3.8rem; }
 
 .contacts__social,
 .contacts__email {
@@ -137,44 +137,44 @@ h2 {
   width: 3px;
   background-color: #64f4ac; }
 
-section.intro main h1 {
-  margin-bottom: 1.5rem; }
-  section.intro main h1 span {
-    color: #64F4AC; }
-
-section.intro main .text {
-  margin-top: 2.5rem; }
-  section.intro main .text p {
-    margin-top: 2.3rem; }
-    section.intro main .text p:last-of-type {
-      margin-top: 1.5rem; }
-
-section.intro main .main-image {
-  text-align: center;
-  width: 35vh;
-  height: 35vh;
-  background: url(../img/ahmad-usman.jpeg) top left/cover no-repeat;
-  border: 4px solid #28292D;
-  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  filter: grayscale(2);
+section.intro main {
+  max-width: 50rem;
   margin: 0 auto; }
-
-section.intro main .chat {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-top: 2.3rem;
-  display: inline-block;
-  position: relative;
-  z-index: 1; }
-  section.intro main .chat svg {
-    width: 2.3rem;
-    height: 2.3rem;
-    color: #64F4AC;
-    z-index: -1;
-    position: absolute;
-    right: 0;
-    bottom: 0; }
+  section.intro main h1 {
+    margin-bottom: 1.5rem; }
+    section.intro main h1 span {
+      color: #64F4AC; }
+  section.intro main .text {
+    margin-top: 2.5rem; }
+    section.intro main .text p {
+      margin-top: 2.3rem; }
+      section.intro main .text p:last-of-type {
+        margin-top: 1.5rem; }
+  section.intro main .main-image {
+    text-align: center;
+    width: 35vh;
+    height: 35vh;
+    background: url(../img/ahmad-usman.jpeg) top left/cover no-repeat;
+    border: 4px solid #28292D;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    filter: grayscale(2);
+    margin: 0 auto; }
+  section.intro main .chat {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 2.3rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1; }
+    section.intro main .chat svg {
+      width: 2.3rem;
+      height: 2.3rem;
+      color: #64F4AC;
+      z-index: -1;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
 
 .stack .stack__list--item {
   margin: 2.3rem 1.5rem;
@@ -231,56 +231,79 @@ section.intro main .chat {
     border: 1px solid #2D2E32; }
     .project-item__img.covid {
       background: url(../img/cov19-track-site.jpg) top left/cover no-repeat; }
-  .project-item__details, .project-item__access {
-    background-color: #2D2E32;
+  .project-item__details {
+    height: 100%;
     width: 100%;
     position: absolute;
-    padding: 0.8rem 1rem; }
-  .project-item__details {
     top: 0;
     left: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5px; }
+    grid-template-columns: 1fr;
+    grid-template-rows: 6rem 1fr 6rem;
+    grid-template-areas: "about" "." "about2"; }
     .project-item__details--about {
-      border-left: 2px solid #64F4AC;
-      padding-left: 0.5rem;
+      padding: 0.8rem 1rem;
+      background-color: #2D2E32;
       display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      .project-item__details--about h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.7rem; }
-      .project-item__details--about p {
-        color: #64F4AC; }
-    .project-item__details--stacks ul {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
       align-items: center; }
-      .project-item__details--stacks ul li {
-        display: inline-block;
-        padding: 5px;
-        background-color: #64F4AC;
-        color: #2D2E32;
-        border-radius: 3px;
-        margin-right: 0.5rem;
-        margin-bottom: 0.5rem; }
-  .project-item__access {
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; }
-    .project-item__access a {
-      padding: 5px;
-      background-color: #64F4AC;
-      color: #2D2E32;
-      border-radius: 3px;
-      margin-bottom: 0.5rem; }
+      .project-item__details--about div {
+        grid-area: about;
+        border-left: 2px solid #64F4AC;
+        padding-left: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .project-item__details--about div h3 {
+          font-size: 1.1rem;
+          margin-bottom: 0.7rem; }
+        .project-item__details--about div p {
+          color: #64F4AC; }
+    .project-item__details--about2 {
+      padding: 0.8rem 1rem;
+      background-color: #2D2E32;
+      grid-area: about2;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: 100%; }
+      .project-item__details--about2 .access {
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; }
+        .project-item__details--about2 .access a {
+          padding: 5px;
+          background-color: #64F4AC;
+          color: #2D2E32;
+          border-radius: 3px;
+          margin-bottom: 0.5rem; }
+      .project-item__details--about2 .stacks {
+        border-left: 2px solid #64F4AC;
+        padding-left: 1.3rem;
+        position: relative; }
+        .project-item__details--about2 .stacks p {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translate(-17px, -50%) rotate(-90deg);
+          /* transform-origin: left; */
+          letter-spacing: 2.3px; }
+        .project-item__details--about2 .stacks ul {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          align-items: end;
+          height: 100%; }
+          .project-item__details--about2 .stacks ul li {
+            display: inline-block;
+            padding: 5px;
+            background-color: #64F4AC;
+            color: #2D2E32;
+            border-radius: 3px;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem; }
 
 .about-me__text {
-  margin-top: 2.5rem;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
   background-color: #2D2E32;
   border-radius: 10px;
@@ -288,6 +311,8 @@ section.intro main .chat {
   font-size: 1.1rem;
   position: relative;
   z-index: -10; }
+  .about-me__text p {
+    max-width: 32rem; }
 
 .about-me__img {
   background: url(../img/ahmad-usman.jpeg) top left/cover no-repeat;
@@ -299,29 +324,34 @@ section.intro main .chat {
   border: 3px solid #64F4AC;
   border-radius: 8px 0 0 8px;
   border-right: none;
-  height: 63%;
+  height: 72%;
   filter: grayscale(8) opacity(0.4);
-  width: 60%; }
+  width: 60%;
+  max-width: 23rem; }
+
+.main-footer__text {
+  font-size: 1.1rem; }
+  .main-footer__text p:not(:last-of-type) {
+    margin-bottom: 2.6rem; }
+  .main-footer__text p.quote {
+    margin-bottom: 0.6rem;
+    max-width: 42rem; }
 
 .main-footer__background-img {
-  height: 100%;
-  transform: rotate(-13deg);
-  position: absolute;
+  height: 51vh;
+  transform: rotate(-14deg);
+  position: fixed;
   right: 2.5rem;
-  top: 2.5rem;
-  z-index: -1; }
+  bottom: -1.5rem;
+  z-index: -100; }
   .main-footer__background-img svg {
     height: 100%;
     color: #2D2E32;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.25)); }
 
-.main-footer__text {
-  margin-top: 2.5rem;
-  font-size: 1.1rem; }
-  .main-footer__text p:not(:last-of-type) {
-    margin-bottom: 1.9rem; }
-  .main-footer__text p.quote {
-    margin-bottom: 0.6rem; }
+main.main {
+  position: relative;
+  z-index: 10; }
 
 section.intro {
   height: 100vh;
@@ -356,7 +386,9 @@ section.projects {
   section.projects ul.project-list {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 2.5rem; }
+    row-gap: 2.5rem;
+    max-width: 50rem;
+    margin: 3.8rem auto; }
     section.projects ul.project-list li.to-right {
       justify-self: end; }
 
@@ -371,16 +403,18 @@ section.about-me {
 
 footer.main-footer {
   position: relative;
-  padding: 4.7rem 3rem 1.7rem 3rem;
-  overflow: hidden; }
+  padding: 0 3rem 1.7rem 3rem;
+  overflow: hidden;
+  margin-top: 4.7rem; }
   footer.main-footer .design-line:first-of-type {
     top: 0;
-    left: 1.3rem; }
+    left: 3rem; }
 
 .main-header {
   position: absolute;
-  margin-top: 1rem;
-  margin-left: 1rem; }
+  margin-top: 2rem;
+  margin-left: 1rem;
+  z-index: 1000; }
   .main-header__logo {
     width: 7rem;
     color: #ffffff;

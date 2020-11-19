@@ -1,3 +1,8 @@
+main.main {
+    position: relative;
+    z-index: 10;
+}
+
 section.intro {
     height: 100vh;
     background-color: $dark-black-background;
@@ -50,6 +55,8 @@ section.projects {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 2.5rem;
+        max-width: 50rem;
+        margin: 3.8rem auto;
 
         li.to-right {
             justify-self: end;
@@ -74,13 +81,14 @@ section.about-me {
 
 footer.main-footer {
     position: relative;
-    padding: 4.7rem 3rem 1.7rem 3rem;
+    padding: 0 3rem 1.7rem 3rem;
     overflow: hidden;
+    margin-top: 4.7rem;
     
     .design-line {
         &:first-of-type {
             top: 0;
-            left: 1.3rem;
+            left: 3rem;
         }
     }
 }

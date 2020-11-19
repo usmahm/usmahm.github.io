@@ -225,7 +225,7 @@ section.intro main {
     border-radius: 6px;
     border: 1px solid #2D2E32; }
     .project-item__img.covid {
-      background: url(../../img/cov19-track-site.jpg) top left/cover no-repeat; }
+      background: url(../img/cov19-track-site.jpg) top left/cover no-repeat; }
   .project-item__details, .project-item__access {
     background-color: #2D2E32;
     width: 100%;
@@ -285,7 +285,7 @@ section.intro main {
   z-index: -10; }
 
 .about-me__img {
-  background: url(../../img/ahmad-usman.jpeg) top left/cover no-repeat;
+  background: url(../img/ahmad-usman.jpeg) top left/cover no-repeat;
   position: absolute;
   top: 50%;
   right: 0;

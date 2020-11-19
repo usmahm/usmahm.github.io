@@ -3,11 +3,12 @@
     position: fixed;
     bottom: 0;
     width: 0;
+    z-index: 100;
 }
 
 .contacts__social {
 
-  left: 13px;
+  left: 1.3rem;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -44,7 +45,7 @@
 
 .contacts__email {
 
-  right: 13px;
+  right: 1.3rem;
   height: 100%;
   display: flex;
   flex-direction: column;

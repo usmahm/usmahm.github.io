@@ -1,0 +1,97 @@
+.project-item {
+  width: 87%;
+  border-radius: 6px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding-top: 60%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  overflow: hidden;
+
+  &__img {
+    &.covid {
+      background: url(../../img/cov19-track-site.jpg) top left / cover no-repeat;
+    }
+    filter: blur(1px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 6px;
+    border: 1px solid $dark-black-background;
+  }
+
+  &__details,
+  &__access {
+    background-color: $dark-black-background;
+    // height: 25%;
+    width: 100%;
+    position: absolute;
+    padding: 0.8rem 1rem;
+  }
+
+  &__details {
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+
+    &--about {
+      border-left: 2px solid $color-green;
+      padding-left: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+      }
+
+      p {
+        color: $color-green;
+      }
+    }
+
+    &--stacks {
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        li {
+          display: inline-block;
+          padding: 5px;
+          background-color: $color-green;
+          color: $dark-black-background;
+          border-radius: 3px;
+          margin-right: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &__access {
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    // justify-content: ;
+    align-items: flex-start;
+
+    a {
+      //   display: inline-block;
+      padding: 5px;
+      background-color: $color-green;
+      color: $dark-black-background;
+      border-radius: 3px;
+      //   margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

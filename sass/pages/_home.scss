@@ -1,5 +1,82 @@
 section.intro {
     height: 100vh;
-    background-color: #2D2E32;
+    background-color: $dark-black-background;
     padding: 8rem 3rem 0 3rem;
+}
+
+section.stack {
+    padding: 0 3rem 2rem 3rem;
+    position: relative;
+    margin: 4.7rem 0;
+
+    
+    .design-line {
+        &:first-of-type {
+            top: 0;
+            right: 1.3rem;
+        }
+        
+        &:last-of-type {
+            left: 3rem;
+            bottom: 0;
+            background-color: $color-white;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+
+section.projects {
+    padding: 0 3rem 0 3rem;
+    position: relative;
+    margin: 4.7rem 0;
+
+    .design-line {
+        &:first-of-type {
+            top: 0;
+            right: 1.3rem;
+        }
+    }
+
+    ul.project-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+
+        li.to-right {
+            justify-self: end;
+        }
+    }
+}
+
+section.about-me {
+    padding: 0 3rem 0 3rem;
+    position: relative;
+    margin: 4.7rem 0;
+    margin-bottom: 0;
+
+    .design-line {
+        &:first-of-type {
+            top: 0;
+            right: 1.3rem;
+        }
+    }
+    
+}
+
+footer.main-footer {
+    position: relative;
+    padding: 4.7rem 3rem 1.7rem 3rem;
+    overflow: hidden;
+    
+    .design-line {
+        &:first-of-type {
+            top: 0;
+            left: 1.3rem;
+        }
+    }
 }

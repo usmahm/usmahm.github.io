@@ -124,7 +124,7 @@
     <div class="contacts__social">
       <ul class="contacts__links">
         <li class="contacts__link">
-          <a href="#">
+          <a href="#" target="_blank">
             <svg><use xlink:href="#github-brands" /></svg>
             <div class="link__username">
               <p>usmahm</p>
@@ -133,7 +133,7 @@
         </li>
 
         <li class="contacts__link">
-          <a href="#">
+          <a href="#" target="_blank">
             <svg><use xlink:href="#linkedin-in-brands" /></svg>
             <div class="link__username">
               <p>usmahm</p>
@@ -142,7 +142,7 @@
         </li>
 
         <li class="contacts__link">
-          <a href="#">
+          <a href="#" target="_blank">
             <svg><use xlink:href="#twitter-brands" /></svg>
             <div class="link__username">
               <p>usmahm</p>
@@ -151,7 +151,7 @@
         </li>
 
         <li class="contacts__link">
-          <a href="#">
+          <a href="#" target="_blank">
             <svg><use xlink:href="#hashnode" /></svg>
             <div class="link__username">
               <p>usmahm</p>
@@ -243,78 +243,95 @@
       </section>
 
       <section class="stack">
-        <hr class="design-line design-line--right" />
+        <div class="design-line"></div>
         <header>
           <h2>Tools I work with:</h2>
         </header>
         <ul class="stack__list">
-          <li class="stack__item">
-            <svg><use xlink:href="#js-brands" /></svg>
-            <div>
+          <li class="stack__list--item">
+            <div class="stack__list--item-icon">
+              <svg><use xlink:href="#js-brands" /></svg>
+            </div>
+            <div class="stack__list--item-name">
               <span>Javascript</span>
             </div>
           </li>
 
-          <li class="stack__item">
-            <svg><use xlink:href="#css3-brands" /></svg>
-            <div>
+          <li class="stack__list--item">
+            <div class="stack__list--item-icon">
+              <svg><use xlink:href="#css3-brands" /></svg>
+            </div>
+            <div class="stack__list--item-name">
               <span>CSS 3</span>
             </div>
           </li>
 
-          <li class="stack__item">
-            <svg><use xlink:href="#html5-brands" /></svg>
-            <div>
+          <li class="stack__list--item">
+            <div class="stack__list--item-icon">
+              <svg><use xlink:href="#html5-brands" /></svg>
+            </div>
+            <div class="stack__list--item-name">
               <span>HTML 5</span>
             </div>
           </li>
 
-          <li class="stack__item">
-            <svg><use xlink:href="#react-brands" /></svg>
-            <div>
+          <li class="stack__list--item">
+            <div class="stack__list--item-icon">
+              <svg><use xlink:href="#react-brands" /></svg>
+            </div>
+            <div class="stack__list--item-name">
               <span>React JS</span>
             </div>
           </li>
 
-          <li class="stack__item">
-            <svg><use xlink:href="#sass-brands" /></svg>
-            <div>
+          <li class="stack__list--item">
+            <div class="stack__list--item-icon">
+              <svg><use xlink:href="#sass-brands" /></svg>
+            </div>
+            <div class="stack__list--item-name">
               <span>SASS</span>
             </div>
           </li>
 
-          <li class="stack__item">
-            <svg><use xlink:href="#github-brands" /></svg>
-            <div>
+          <li class="stack__list--item">
+            <div class="stack__list--item-icon">
+              <svg><use xlink:href="#github-brands" /></svg>
+            </div>
+            <div class="stack__list--item-name">
               <span>Github</span>
             </div>
           </li>
 
-          <li class="stack__item">
-            <svg><use xlink:href="#git-brands" /></svg>
-            <div>
+          <li class="stack__list--item">
+            <div class="stack__list--item-icon">
+              <svg><use xlink:href="#git-brands" /></svg>
+            </div>
+            <div class="stack__list--item-name">
               <span>Git</span>
             </div>
           </li>
         </ul>
-
-        <hr class="design-line design-line--left" />
+        <div class="design-line"></div>
       </section>
-
-      <section id="projects">
-        <hr class="design-line design-line--right" />
+      
+      <section id="projects" class="projects">
+        <div class="design-line"></div>
         <h2>Selected Projects</h2>
 
-        <ul class="projects">
-          <li class="project">
-            <div class="project__details">
-              <div class="project__about">
+        <ul class="project-list">
+          
+          <li class="project-item">
+            <div class="project-item__img covid">
+            </div>
+
+            <div class="project-item__details">
+              <div class="project-item__details--about">
                 <h3>Coronavirus Tracker</h3>
                 <p>
                   Live Coronavirus cases website with map data visualization.
                 </p>
               </div>
-              <div class="project__stacks">
+              <div class="project-item__details--stacks">
                 <ul>
                   <li>JAVASCRIPT</li>
                   <li>AMCHARTS</li>
@@ -322,99 +339,106 @@
                 </ul>
               </div>
             </div>
-            <div class="project__img">
-              <img src="" alt="Project Image" />
-            </div>
-            <div class="project__access">
+            
+            <div class="project-item__access">
               <a href="#">View Code</a>
               <a href="#">Live Preview</a>
             </div>
           </li>
+          
+          <li class="project-item to-right">
+            <div class="project-item__img covid">
+            </div>
 
-          <li class="project">
-            <div class="project__details">
-              <div class="project__about">
-                <h3>World Clock App</h3>
+            <div class="project-item__details">
+              <div class="project-item__details--about">
+                <h3>Coronavirus Tracker</h3>
                 <p>
-                  View Current time in any timezones - Auto updates added
-                  timezones
+                  Live Coronavirus cases website with map data visualization.
                 </p>
               </div>
-              <div class="project__stacks">
+              <div class="project-item__details--stacks">
                 <ul>
                   <li>JAVASCRIPT</li>
-                  <li>CSS</li>
+                  <li>AMCHARTS</li>
+                  <li>SCSS</li>
                 </ul>
               </div>
             </div>
-            <div class="project__img">
-              <img src="" alt="Project Image" />
-            </div>
-            <div class="project__access">
+            
+            <div class="project-item__access">
               <a href="#">View Code</a>
               <a href="#">Live Preview</a>
             </div>
           </li>
+          
+          <li class="project-item">
+            <div class="project-item__img covid">
+            </div>
 
-          <li class="project">
-            <div class="project__details">
-              <div class="project__about">
-                <h3>Scooltec Website</h3>
+            <div class="project-item__details">
+              <div class="project-item__details--about">
+                <h3>Coronavirus Tracker</h3>
                 <p>
-                  Collaborated with a backend Developer to build
-                  <a href="www.scooltec.com">Scooltec</a> Website
+                  Live Coronavirus cases website with map data visualization.
                 </p>
               </div>
-              <div class="project__stacks">
+              <div class="project-item__details--stacks">
                 <ul>
                   <li>JAVASCRIPT</li>
-                  <li>CSS</li>
+                  <li>AMCHARTS</li>
+                  <li>SCSS</li>
                 </ul>
               </div>
             </div>
-            <div class="project__img">
-              <img src="" alt="Project Image" />
+            
+            <div class="project-item__access">
+              <a href="#">View Code</a>
+              <a href="#">Live Preview</a>
             </div>
-            <div class="project__access">
+          </li>
+          
+          <li class="project-item to-right">
+            <div class="project-item__img covid">
+            </div>
+
+            <div class="project-item__details">
+              <div class="project-item__details--about">
+                <h3>Coronavirus Tracker</h3>
+                <p>
+                  Live Coronavirus cases website with map data visualization.
+                </p>
+              </div>
+              <div class="project-item__details--stacks">
+                <ul>
+                  <li>JAVASCRIPT</li>
+                  <li>AMCHARTS</li>
+                  <li>SCSS</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="project-item__access">
               <a href="#">View Code</a>
               <a href="#">Live Preview</a>
             </div>
           </li>
 
-          <!-- <li class="project">
-                    <div class="project__details">
-                        <div class="project__about">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="project__stacks">
-                            <ul>
-                                <li>JAVASCRIPT</li>
-                                <li>AMCHARTS</li>
-                                <li>SCSS</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="project__img">
-                        <img src="" alt="Project Image">
-                    </div>
-                    <div class="project__access">
-                        <a href="#">View Code</a>
-                        <a href="#">Live Preview</a>
-                    </div>
-                </li> -->
+         
+
         </ul>
       </section>
 
-      <section id="about-me">
-        <hr class="design-line design-line--right" />
+      <section id="about-me" class="about-me">
+        <div class="design-line"></div>
         <h2>Who's this guy?</h2>
 
-        <div>
+        <div class="about-me__text">
           <p>
             Ahmad Usman is a creative, self-motivated and passionate Front-End
             Developer, passionate about writing clean and organized code, keen
             on personal and professional development.
+            <br />
             <br />
 
             I offer my ability (fueled by my passion for building solutions) to
@@ -424,43 +448,54 @@
             solving techniques.
 
             <br />
+            <br />
             When not coding, I'm either reading, writing articles, watching
             movies or sleeping. Self development books are my number one
             choices.
 
             <br />
+            <br />
             Space exploration, Machine Learning, AI are what I’m also very
             ethusiastic about.
 
+            <br />
             <br />
             I'm currently looking for opportunities where I can contribute my
             skills and collaborate with a team on ambitious projects.
 
             <br />
+            <br />
             Cheers, you now know about me. ^_~
           </p>
           <div class="about-me__img">
-            <img src="./img/Ahmad Usman.jpeg" alt="Ahmad Usman Image" />
+            <!-- <img src="./img/Ahmad Usman.jpeg" alt="Ahmad Usman Image" /> -->
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="background-img">
+    <footer class="main-footer">
+      <div class="main-footer__background-img">
         <svg><use xlink:href="#astronaut-solid" /></svg>
       </div>
-      <hr class="design-line design-line--left" />
+      <div class="design-line"></div>
 
-      <p>Have a question or wanna make something together.</p>
-      <p>Start by <a href="mailto:ahmadujuwon@gmail.com">saying hi.</a></p>
-      <p>
-        No one is built for anything. We all become good at what we do as a
-        result of learning and acquiring information.
-      </p>
-      <p>-- Just learn &lt DoItForTheFuture /&gt</p>
-
-      <p>Handcrafted by me © Ahmad Usman. 2020. All right reserved</p>
+      <div  class="main-footer__text">
+        <p>Have a question or wanna make something together.</p>
+        <p>Start by <a href="mailto:ahmadujuwon@gmail.com">saying hi.</a></p>
+        <p class="quote">
+          No one is built for anything. We all become good at what we do as a
+          result of learning and acquiring information.
+          <!-- <br>
+          <br>
+          -- Just learn &lt DoItForTheFuture /&gt. -->
+        </p>
+        <p>-- Just learn, &lt DoItForTheFuture /&gt.</p>
+  
+        <p>Handcrafted by me © Ahmad Usman. 
+          <br>
+          2020. All right reserved</p>
+      </div>
     </footer>
   </body>
 </html>

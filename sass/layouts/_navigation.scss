@@ -1,10 +1,73 @@
 .navigation {
   position: fixed;
-  right: 1rem;
-  top: 1rem;
   z-index: 100;
+  display: inline-block;
+  top: 0;
+  right: 0;
+
+  @include respond(tab-port) {
+    position: relative;
+    width: calc(100% - 14rem);
+    right: 0;
+    top: 0;
+    max-width: 35rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 40rem;
+  }
+
   &__nav {
     display: none;
+
+    @include mobile-only {
+      // width: 75vw;
+      // height: 100vh;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      // right: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: #25262a;
+      // right: -75vw;
+      // transition: all 0.4s;
+    }
+
+    .navigation__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include mobile-only {
+        flex-direction: column;
+        transform: translateX(22vw);
+      }
+
+      .navigation__item {
+        @include mobile-only {
+          height: 36px;
+          width: 90px;
+          font-size: 1.3rem;
+          color: #64f4ac;
+          border: 2px solid #64f4ac;
+          border-radius: 13px;
+          margin-bottom: 20px;
+          font-weight: 600;
+
+          a {
+            height: 100%;
+            width: 100%;
+            @include centerContent;
+          }
+        }
+
+      }
+    }
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 
   &__checkbox {
@@ -13,6 +76,10 @@
 
   &__button {
     display: inline-block;
+    right: 1rem;
+    top: 1rem;
+    position: fixed;
+    z-index: 100;
 
     // hover
     width: 5rem;
@@ -22,12 +89,28 @@
     box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.25);
     background-color: rgba($dark-black-background, 0.8);
 
+    @include respond(tab-port) {
+      display: none;
+    }
+
     &-icon {
       width: 2.3rem;
       position: relative;
 
       //hover
       margin-top: 2.5rem;
+
+      .shoot {
+        width: 2.3rem;
+        // margin-top: 2.5rem;
+        position: absolute;
+        height: 2px;
+        display: inline-block;
+        background-color: $color-white;
+        left: 0;
+        border-radius: 10px;
+        transition: all 0.1s;
+      }
 
       &,
       &::before,
@@ -42,18 +125,18 @@
       &::before,
       &::after {
         position: absolute;
-        width: 1.4rem;
+        width: 1.3rem;
       }
 
       &::before {
         content: "";
-        top: -9px;
+        top: -7px;
         left: 0;
       }
 
       &::after {
         content: "";
-        top: 9px;
+        top: 7px;
         right: 0;
       }
     }
@@ -66,36 +149,84 @@
         &::before,
         &::after {
           position: absolute;
-          width: 1.8rem;
+          width: 1.6rem;
         }
 
         &::before {
           content: "";
-          top: -10px;
+          transform: translate(6px, -1px);
         }
 
         &::after {
           content: "";
-          top: 10px;
-          right: 0;
+          transform: translate(-6px, 1px);
         }
       }
     }
   }
 
-  &__checkbox:checked + &__button &__button-icon {
+  .bgr-cover {
+    @include mobile-only {
+      right: -55vw;
+  
+      height: 92vh;
+      width: 55vw;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -10;
+      background-color: #64f4ac;
+      transition-delay: 2s;
+      transition: all 2s;
+    }
+  }
+
+  .wrapper {
+    @include mobile-only {
+      @include mobile-only {
+        width: 75vw;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        right: -75vw;
+        transition: all 0.4s;
+      }
+    }
+  }
+
+  @include mobile-only {
+    &__checkbox:checked ~ .wrapper {
+      // height: 100vh;
+      // width: 100vw;
+      transform: translateX(-75vw);
+    }
+
+    &__checkbox:checked ~  &__button &__button-icon {
       background-color: transparent;
-  }
+      .shoot {
+        transform: translateX(10rem);
+        transition: all 0.2s;
+      }
+    }
 
-  &__checkbox:checked + &__button &__button-icon::before {
-    top: 0;
-    transform: rotate(135deg);
-    width: 2.3rem;
-  }
+    &__checkbox:checked ~ &__button &__button-icon::before {
+      top: 0;
+      transform: rotate(135deg);
+      width: 2.3rem;
+    }
 
-  &__checkbox:checked + &__button &__button-icon::after {
-    top: 0;
-    transform: rotate(-135deg);
-    width: 2.3rem;
+    &__checkbox:checked ~ &__button &__button-icon::after {
+      top: 0;
+      transform: rotate(-135deg);
+      width: 2.3rem;
+    }
+
+    &__checkbox:checked ~ .wrapper .bgr-cover {
+      transform: translateY(-50%) translateX(-100vw);
+    }
+
+    &__checkbox:checked ~ .wrapper &__nav {
+      // transform: translateX(-75vw);
+    }
   }
 }

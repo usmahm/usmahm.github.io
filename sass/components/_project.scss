@@ -1,131 +1,167 @@
-.project-item {
-  width: 87%;
-  border-radius: 6px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
-  position: relative;
-  padding-top: 60%;
-  font-size: 0.8rem;
-  font-weight: 600;
-  overflow: hidden;
-
-  &__img {
-    &.covid {
-      background: url(../img/cov19-track-site.jpg) top left / cover no-repeat;
-    }
-    filter: blur(1px);
-    height: 100%;
+.projects {
+  > main {
+    position: relative;
+    max-width: 75rem;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 6px;
-    border: 1px solid $dark-black-background;
+    margin: 0 auto;
   }
+  .project-item {
+    width: 87%;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding-top: 60%;
+    font-size: 0.8rem;
+    font-weight: 600;
+    overflow: hidden;
 
-  // &__details,
-  // &__access {
-  //   background-color: $dark-black-background;
-  //   // height: 25%;
-  //   width: 100%;
-  //   position: absolute;
-  // }
-
-  &__details {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 6rem 1fr 6rem;
-    grid-template-areas:
-      "about"
-      "."
-      "about2";
-
-    &--about {
-      padding: 0.8rem 1rem;
-      background-color: $dark-black-background;
-      display: flex;
-      align-items: center;
-
-      div {
-        grid-area: about;
-        border-left: 2px solid $color-green;
-        padding-left: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-        h3 {
-          font-size: 1.1rem;
-          margin-bottom: 0.7rem;
-        }
-        
-        p {
-          color: $color-green;
-        }
+    @include respond(tab-port) {
+      width: 100%;
+      &:nth-child(even) {
+        transform: translateY(4.5rem);
+        transform-origin: top;
       }
     }
 
-    &--about2 {
-      padding: 0.8rem 1rem;
-      background-color: $dark-black-background;
-      grid-area: about2;
+    &__img {
+      &.covid {
+        background: url(../img/cov19-track-site.jpg) top left / cover no-repeat;
+      }
+      filter: blur(1px);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 6px;
+      border: 1px solid $dark-black-background;
+    }
+
+    // &__details,
+    // &__access {
+    //   background-color: $dark-black-background;
+    //   // height: 25%;
+    //   width: 100%;
+    //   position: absolute;
+    // }
+
+    &__details {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: 100%;
-      
-      .access {
-        bottom: 0;
-        left: 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: 6rem 1fr 6rem;
+      grid-template-areas:
+        "about"
+        "."
+        "about2";
+
+      &--about {
+        padding: 0.8rem 1rem;
+        background-color: $dark-black-background;
         display: flex;
-        flex-direction: column;
-        // justify-content: ;
-        align-items: flex-end;
-        
-        a {
-          //   display: inline-block;
-          padding: 5px;
-          background-color: $color-green;
-          color: $dark-black-background;
-          border-radius: 3px;
-          //   margin-right: 0.5rem;
-          margin-bottom: 0.5rem;
+        align-items: center;
+
+        div {
+          grid-area: about;
+          border-left: 2px solid $color-green;
+          padding-left: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+          }
+
+          p {
+            color: $color-green;
+          }
         }
       }
 
-      .stacks {
-        border-left: 2px solid $color-green;
-        padding-left: 1.3rem;
-        position: relative;
+      &--about2 {
+        padding: 0.8rem 1rem;
+        background-color: $dark-black-background;
+        grid-area: about2;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 100%;
 
-        p {
-          position: absolute;
+        .access {
+          bottom: 0;
           left: 0;
-          top: 50%;
-          transform: translate(-17px, -50%) rotate(-90deg);
-    /* transform-origin: left; */
-    letter-spacing: 2.3px;
-        }
-
-        ul {
           display: flex;
-          flex-flow: row wrap;
-          justify-content: flex-start;
-          align-items: end;
-          height: 100%;
+          flex-direction: column;
+          // justify-content: ;
+          align-items: flex-end;
 
-          li {
-            display: inline-block;
+          a {
+            //   display: inline-block;
             padding: 5px;
             background-color: $color-green;
             color: $dark-black-background;
             border-radius: 3px;
-            margin-right: 0.5rem;
+            //   margin-right: 0.5rem;
             margin-bottom: 0.5rem;
+          }
+        }
+
+        .stack {
+          border-left: 2px solid $color-green;
+          padding-left: 1.3rem;
+          position: relative;
+
+          // p {
+          //   position: absolute;
+          //   left: 0;
+          //   top: 50%;
+          //   transform: translate(-17px, -50%) rotate(-90deg);
+          //   /* transform-origin: left; */
+          //   letter-spacing: 2.3px;
+          // }
+
+          div.head {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            position: absolute;
+            left: 0.4rem;
+
+            div {
+              transform: rotate(-90deg);
+              font-size: 0.6rem;
+            }
+          }
+
+          ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: end;
+            height: 100%;
+
+            li {
+              display: inline-block;
+              padding: 5px;
+              background-color: $color-green;
+              color: $dark-black-background;
+              border-radius: 3px;
+              margin-right: 0.5rem;
+            }
+            li:first-child {
+              margin-bottom: 0.5rem;
+            }
+
+            li:first-child:nth-last-child(4) ~ .line-break {
+              width: 100%;
+            }
           }
         }
       }

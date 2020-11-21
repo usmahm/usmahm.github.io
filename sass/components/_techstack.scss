@@ -1,4 +1,13 @@
 .stack {
+    > main {
+        // height: 100%;
+        width: 100%;
+        max-width: 75rem;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 3rem;
+      }
+
     .stack__list {
         &--item {
             margin: 2.3rem 1.5rem;

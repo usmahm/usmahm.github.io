@@ -3,11 +3,28 @@
   margin-top: 2rem;
     margin-left: 1rem;
     z-index: 1000;
-
-  &__logo {
-    width: 7rem;
-    color: #ffffff;
-    height: 3rem;
+    max-width: 104rem;
+    
+    @include respond(tab-port) {
+      // position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      height: $main-header-height;
+      margin: 0;
+      background-color: $dark-black-background;
+      width: 100%;
+      margin: 0 auto;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+    
+    &__logo {
+      width: 7rem;
+      color: #ffffff;
+      height: 3rem;
+      display: inline-block;
 
     svg {
       width: 100%;

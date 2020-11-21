@@ -1,4 +1,14 @@
 .about-me {
+
+    > main {
+        @include respond(tab-port) {
+            position: relative;
+            max-width: 75rem;
+            width: 100%;
+            margin: 0 auto;
+          }    
+    }
+
     &__text {
         // margin-top: 2.5rem;
         box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
@@ -9,8 +19,17 @@
         position: relative;
         z-index: -10;
 
+        @include respond(tab-port) {
+            width: 84.5%;
+          }
+
+
         p {
             max-width: 32rem;
+
+            // @include respond(tab-port) {
+            //     width: 80%;
+            //   }
         }
     }
 
@@ -28,5 +47,13 @@
         filter: grayscale(8) opacity(0.4);
         width: 60%;
         max-width: 23rem;
+        max-height: 30rem;
+
+        @include respond(tab-port) {
+            right: -18%;
+            transform: translate(0, -50%);
+            border: 5px solid #64F4AC;
+            border-radius: 8px;;
+          }
     }
 }

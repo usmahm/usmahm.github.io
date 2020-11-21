@@ -1,94 +1,156 @@
 main.main {
-    position: relative;
-    z-index: 10;
+  position: relative;
+  z-index: 10;
 }
 
 section.intro {
-    height: 100vh;
-    background-color: $dark-black-background;
-    
-    main {
-        padding: 8rem 3rem 0 3rem;
-        height: 100%;
+  height: 100vh;
+  background-color: $dark-black-background;
+
+  @include respond(tab-port) {
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .intro__main-content {
+    padding: 8rem 3rem 0 3rem;
+    // height: 100%;
+
+    @include respond(tab-port) {
+      padding: 0;
+      padding-top: 3.8rem;
     }
+  }
 }
 
 section.stack {
-    padding: 0 3rem 2rem 3rem;
-    position: relative;
-    margin: 4.7rem 0;
+  padding: 0 3rem 2rem 3rem;
+  position: relative;
+  margin: 4.7rem 0;
 
-    
-    .design-line {
-        &:first-of-type {
-            top: 0;
-            right: 1.3rem;
-        }
-        
-        &:last-of-type {
-            left: 3rem;
-            bottom: 0;
-            background-color: $color-white;
-        }
+  @include respond(tab-port) {
+    width: 100%;
+    margin: 4.7rem auto;
+    padding: 0 3rem;
+  }
+
+  .design-line {
+    &:first-of-type {
+      top: 0;
+      right: 1.3rem;
+
+      @include respond(tab-port) {
+        right: 0;
+      }
     }
 
-    ul {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+    &:last-of-type {
+      left: 3rem;
+      bottom: 0;
+      background-color: $color-white;
+
+      @include respond(tab-port) {
+        left: 0;
+      }
     }
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }
 
 section.projects {
-    padding: 0 3rem 0 3rem;
-    position: relative;
-    margin: 4.7rem 0;
+  padding: 0 3rem;
+  position: relative;
+  margin: 4.7rem 0;
 
-    .design-line {
-        &:first-of-type {
-            top: 0;
-            right: 1.3rem;
-        }
+  @include respond(tab-port) {
+    margin: 4.7rem auto;
+    margin-bottom: 9.2rem;
+    // padding: 0;
+  }
+
+  .design-line {
+    &:first-of-type {
+      top: 0;
+      right: 1.3rem;
+
+      @include respond(tab-port) {
+        right: 0;
+      }
     }
+  }
 
-    ul.project-list {
-        display: grid;
-        grid-template-columns: 1fr;
+  ul.project-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+    max-width: 50rem;
+    margin: 3.8rem auto;
+    
+    @include respond(tab-port) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5rem;
         row-gap: 2.5rem;
-        max-width: 50rem;
-        margin: 3.8rem auto;
+        max-width: none;
+      }
 
-        li.to-right {
-            justify-self: end;
-        }
+    li.to-right {
+      justify-self: end;
     }
+  }
 }
 
 section.about-me {
-    padding: 0 3rem 0 3rem;
-    position: relative;
-    margin: 4.7rem 0;
-    margin-bottom: 0;
+  padding: 0 3rem 0 3rem;
+  position: relative;
+  margin: 4.7rem 0;
+  margin-bottom: 0;
 
-    .design-line {
-        &:first-of-type {
-            top: 0;
-            right: 1.3rem;
-        }
+  @include respond(tab-port) {
+    width: 100%;
+    margin: 4.7rem auto;
+    padding: 0 3rem;
+  }
+
+  .design-line {
+    &:first-of-type {
+      top: 0;
+      right: 1.3rem;
     }
-    
+  }
 }
 
 footer.main-footer {
-    position: relative;
-    padding: 0 3rem 1.7rem 3rem;
-    overflow: hidden;
-    margin-top: 4.7rem;
-    
-    .design-line {
-        &:first-of-type {
-            top: 0;
-            left: 3rem;
+  position: relative;
+  padding: 0 3rem 1.7rem 3rem;
+  overflow: hidden;
+  margin-top: 4.7rem;
+
+  .main-footer-wrapper {
+      position: relative;
+        @include respond(tab-port) {
+          max-width: 75rem;
+          width: 100%;
+          margin: 0 auto;
+        //   margin: 4.7rem auto;
+        //   padding: 0 3rem;
         }
+  }
+
+  .design-line {
+    &:first-of-type {
+      top: -3.8rem;
+      left: 0;
+
+    //   @include respond(tab-port) {
+    //     left: 0;
+    //   }
     }
+  }
 }

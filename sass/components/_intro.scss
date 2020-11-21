@@ -1,29 +1,19 @@
 section.intro {
-  main {
-    // display: grid;
-    // grid-template-columns: 1fr
-    // grid-template-rows: auto ;
+  > main {
+    // height: 100%;
+    width: 100%;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  .intro__main-content {
     max-width: 50rem;
     margin: 0 auto;
 
-    h1 {
-      margin-bottom: 1.5rem;
-
-      span {
-        color: $color-green;
-      }
-    }
-
-    .text {
-      margin-top: 2.5rem;
-
-      p {
-        margin-top: 2.3rem;
-
-        &:last-of-type {
-          margin-top: 1.5rem;
-        }
-      }
+    @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: none;
     }
 
     .main-image {
@@ -37,25 +27,76 @@ section.intro {
       filter: grayscale(2);
       margin: 0 auto;
 
+     
+        @include respond(tab-port) {
+          width: 40vh;
+          height: 40vh;
+        }
+
+        @include respond(tab-land) {
+          width: 45vh;
+          height: 45vh;
+        }
+      }
+
+    .details {  
+          max-width: 37rem;
+          margin: 0 auto;
+          h1 {
+            margin-bottom: 1.5rem;
+      
+            span {
+              color: $color-green;
+            }
+          }
+      
+          .text {
+            margin-top: 2.5rem;
+      
+            p {
+              margin-top: 2.3rem;
+              line-height: 1.5;
+      
+              &:last-of-type {
+                margin-top: 1.5rem;
+              }
+            }
+          }
+
+          .main-image {      
+            @include respond(tab-port) {
+              display: none;
+            }
+          }
+      
+          .chat {
+              font-size: 1.3rem;
+              font-weight: 700;
+              margin-top: 2.3rem;
+              display: inline-block;
+              position: relative;
+              z-index: 1;
+      
+              svg {
+                  width: 2.3rem;
+                  height: 2.3rem;
+                  color:  $color-green;
+                  z-index: -1;
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+              }
+          }
     }
 
-    .chat {
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-top: 2.3rem;
-        display: inline-block;
-        position: relative;
-        z-index: 1;
+    .img-desk {
+      display: none;
 
-        svg {
-            width: 2.3rem;
-            height: 2.3rem;
-            color:  $color-green;
-            z-index: -1;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-        }
+      @include respond(tab-port) {
+        display: block;
+        align-self: center;
+        justify-self: flex-end;
+      }
     }
   }
 }

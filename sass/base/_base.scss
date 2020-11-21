@@ -10,8 +10,10 @@
 
 html {
     font-size: 10px;
-    // text-decoration: none;
-    // color: inherit;
+
+    @include respond(tab-land) {
+        font-size: 13px;
+    }
 }
 
 body {
@@ -29,6 +31,3 @@ ul {
     list-style: none;
 }
 
-h2 {
-    font-size: 1.3rem;
-}

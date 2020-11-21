@@ -4,9 +4,16 @@
   header {
     position: relative;
     display: none;
+    width: 18.4rem;
+    height: 3.1rem;
+
+    @include respond(tab-port) {
+      display: inline-block;
+    }
+
     .circle {
-      width: 14px;
-      height: 14px;
+      width: 1rem;
+      height: 1rem;
       border-radius: 50%;
       position: absolute;
       background-color: $dark-black;
@@ -22,7 +29,11 @@
       &.bottom-left {
         right: 0;
         bottom: 0;
-        transform: translate(8%, 6%);
+        transform: translate(35%, 35%);
+
+        // @include respond(tab-land) {
+        //   transform: translate(8%, 6%);
+        // }
       }
     }
 
@@ -30,30 +41,43 @@
       &-wrapper {
         position: relative;
         display: inline-block;
-        width: 26rem;
-        height: 5rem;
+        width: 18.4rem;
+        height: 3.1rem;
         background-color: $color-white;
-        clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 89.1% 0, 100% 100%, 0 100%);
       }
 
       &-inner {
-        padding: 15px;
-        padding-right: 25px;
-        width: 24.6rem;
-        height: 4.2rem;
+        /* padding: 15px; */
+        padding-left: 0.8rem;
+        padding-right: 0;
+        width: 17.86rem;
+        height: 2.7rem;
         position: absolute;
-        top: 4px;
-        left: 4px;
+        top: 2px;
+        left: 2px;
         transform: translate(3px 3px);
-        background-color: #25262a;
-        clip-path: polygon(0 0, 82.4% 0, 100% 100%, 0 100%);
+        background-color: $dark-black;
+        clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
+        @include respond(tab-land) {
+          width: 17.84rem;
+          height: 2.66rem;
+          top: 3px;
+          left: 3px;
+        }
+
         p {
-          font-size: 1.7rem;
+          font-size: 1.1rem;
           font-weight: 400;
+          letter-spacing: 1.5px;
+
+          @include respond(tab-land) {
+            letter-spacing: 2px;
+          }
           span {
             font-weight: 700;
           }
@@ -64,13 +88,17 @@
 
   main {
     h1 {
-        font-size: 3.5rem;
-            }
+      font-size: 3.5rem;
+    }
 
     .text {
       p {
         font-size: 1.1rem;
       }
     }
+  }
 }
+
+h2 {
+  font-size: 1.3rem;
 }

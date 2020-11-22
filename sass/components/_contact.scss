@@ -14,27 +14,49 @@
   flex-direction: column;
 
   .contacts__line {
-    height: 10.3rem;
+    height: 103px;
   }
 }
 
 .contacts__links {
   transform: translate(-0.65rem, -1rem);
+
+  @include respond(tab-land) {
+    transform: translate(-0.5rem, -1rem);
+  }
 }
 
 .contacts__link {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 17px;
+  height: 17px;
 
   &:not(:last-of-type) {
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
   }
 
   a {
     height: 100%;
+    overflow: hidden;
+
+    &:hover {
+      svg {
+        transform: translateX(120%);
+
+        &.icon-coloured { 
+          transform: translate(0, -120%);;
+        }
+      }
+    }
+
     svg {
       width: 100%;
       height: 100%;
+      transition: all .2s;
+
+      &.icon-coloured {
+        transform: translate(-120%, -120%);
+        color: $color-green;
+      }
     }
 
     .link__username {
@@ -52,14 +74,48 @@
   justify-content: flex-end;
   align-items: flex-end;
 
-  a {
-    transform: rotate(90deg) translateX(-1rem);
+  span {
+    overflow: hidden;
+    transform: rotate(90deg) translate(0.65px, 1.9px);
     transform-origin: right;
-    font-weight: 700;
+    height: 15px;
+    width: 120px;
+    @include centerContent;
+    justify-content: flex-start;
+    position: relative;
+
+    &:hover {
+      a {
+        transform: translateY(-100%);
+        &.link-coloured {
+          transform: translate(0, 0);
+        }
+      }
+    }
+  
+    a {
+      position: absolute;
+      right: 0;
+      letter-spacing: 3.6px;
+      white-space: nowrap;
+      font-weight: 700;
+      transition: all .2s;
+  
+      
+      @include respond(tab-land) {
+        letter-spacing: 2.6px;
+        // transform: rotate(90deg) translate(0.65px, 0px);
+      }
+  
+      &.link-coloured {
+        transform: translate(0, 100%);
+        color: $color-green;
+      }
+    }
   }
 
   .contacts__line {
-    height: 5.7rem;
+    height: 103px;
   }
 }
 

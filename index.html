@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <title>Ahmad Usman - Personal Website</title>
   </head>
   <body>
@@ -131,38 +132,42 @@
     <div class="contacts__social">
       <ul class="contacts__links">
         <li class="contacts__link">
-          <a href="#" target="_blank">
+          <a href="https://github.com/usmahm" target="_blank">
             <svg><use xlink:href="#github-brands" /></svg>
-            <div class="link__username">
+            <svg class="icon-coloured"><use xlink:href="#github-brands" /></svg>
+            <!-- <div class="link__username">
               <p>usmahm</p>
-            </div>
+            </div> -->
           </a>
         </li>
 
         <li class="contacts__link">
           <a href="#" target="_blank">
             <svg><use xlink:href="#linkedin-in-brands" /></svg>
-            <div class="link__username">
+            <svg class="icon-coloured"><use xlink:href="#linkedin-in-brands" /></svg>
+            <!-- <div class="link__username">
               <p>usmahm</p>
-            </div>
+            </div> -->
           </a>
         </li>
 
         <li class="contacts__link">
-          <a href="#" target="_blank">
+          <a href="https://twitter.com/usmahm" target="_blank">
             <svg><use xlink:href="#twitter-brands" /></svg>
-            <div class="link__username">
+            <svg class="icon-coloured"><use xlink:href="#twitter-brands" /></svg>
+            <!-- <div class="link__username">
               <p>usmahm</p>
-            </div>
+            </div> -->
           </a>
         </li>
 
         <li class="contacts__link">
-          <a href="#" target="_blank">
+          <a href="https://usmahm.hashnode.dev/" target="_blank">
             <svg><use xlink:href="#hashnode" /></svg>
-            <div class="link__username">
+            <svg class="icon-coloured"><use xlink:href="#hashnode" /></svg>
+            <!-- <div class="link__username">
               <p>usmahm</p>
-            </div>
+            </div> -->
           </a>
         </li>
       </ul>
@@ -170,7 +175,10 @@
     </div>
 
     <div class="contacts__email">
-      <a href="mailto:ahmadujuwon@gmail.com">Ahmadujuwon@gmail.com</a>
+      <span>
+        <a href="mailto:ahmadujuwon@gmail.com">Send E-mail</a>
+        <a class="link-coloured" href="mailto:ahmadujuwon@gmail.com">Send E-mail</a>
+      </span>
       <div class="contacts__line"></div>
     </div>
 
@@ -193,18 +201,22 @@
             <ul class="navigation__list">
               <li class="navigation__item">
                 <a href="#home">Home</a>
+                <a class="link-coloured" href="#home">Home</a>
               </li>
   
               <li class="navigation__item">
-                <a href="#about">About</a>
+                <a href="#about-me">About</a>
+                <a class="link-coloured" href="#about-me">About</a>
               </li>
   
               <li class="navigation__item">
-                <a href="#blog">Blog</a>
+                <a href="https://usmahm.hashnode.dev/" target="_blank">Blog</a>
+                <a class="link-coloured" href="https://usmahm.hashnode.dev/" target="_blank">Blog</a>
               </li>
   
               <li class="navigation__item">
                 <a href="#projects">Projects</a>
+                <a class="link-coloured" href="#projects">Projects</a>
               </li>
             </ul>
           </nav>
@@ -216,17 +228,17 @@
       </div>
     </header>
 
-    <main class="main">
+    <main id="home" class="main">
       <section id="intro" class="intro">
         <main>
           <header>
-            <span class="circle top-right"></span>
+            <!-- <span class="circle top-right"></span> -->
             <div class="main-title-wrapper">
               <div class="main-title-inner">
                 <p><span>Front-End</span> Developer</p>
               </div>
             </div>
-            <span class="circle bottom-left"></span>
+            <!-- <span class="circle bottom-left"></span> -->
           </header>
 
           <main class="intro__main-content">
@@ -242,7 +254,7 @@
 
                 <p>
                   I develop high quality, maintainable and modern web
-                  applications that's. using my strong background in HTML, CSS,
+                  applications using my strong background in HTML, CSS,
                   Javascript. As a well organized person, problem solver, I pay
                   attention to detail when dealing with a project.
                 </p>
@@ -252,7 +264,10 @@
                 </p>
 
                 <span class="chat">
-                  <a href="mailto:ahmadujuwon@gmail.com">Let's Chat</a>
+                  <span>
+                    <a href="mailto:ahmadujuwon@gmail.com">Let's Chat</a>
+                    <a class="link-coloured" href="mailto:ahmadujuwon@gmail.com">Let's Chat</a>
+                  </span>
                   <svg><use xlink:href="#comment-regular" /></svg>
                 </span>
               </div>
@@ -372,6 +387,7 @@
                       <div>S</div>
                     </div>
                     <ul>
+                      <li>HTML 5</li>
                       <li>JAVASCRIPT</li>
                       <li>AMCHARTS</li>
                       <div class="line-break"></div>
@@ -379,23 +395,22 @@
                     </ul>
                   </div>
                   <div class="access">
-                    <a href="#">View Code</a>
-                    <a href="#">Live Preview</a>
+                    <a href="https://github.com/usmahm/Coronavirus-Tracker" target="_blank">View Code</a>
+                    <a href="https://cov-19-live-tracker.netlify.app/" target="_blank">Live Preview</a>
                   </div>
                 </div>
               </div>
             </li>
 
             <li class="project-item to-right">
-              <div class="project-item__img covid"></div>
+              <div class="project-item__img scooltec"></div>
 
               <div class="project-item__details">
                 <div class="project-item__details--about">
                   <div>
-                    <h3>Coronavirus Tracker</h3>
+                    <h3>Scooltec</h3>
                     <p>
-                      Live Coronavirus cases website with map data
-                      visualization.
+                      One time contract to build Scootec website (Front-End) from scratch. 
                     </p>
                   </div>
                 </div>
@@ -410,27 +425,27 @@
                       <div>S</div>
                     </div>
                     <ul>
-                      <li>JAVASCRIPT</li>
-                      <li>AMCHARTS</li>
+                      <li>HTML 5</li>
+                      <li>CSS</li>
                       <div class="line-break"></div>
-                      <li>SCSS</li>
+                      <li>JAVASCRIPT</li>
                     </ul>
                   </div>
                   <div class="access">
-                    <a href="#">View Code</a>
-                    <a href="#">Live Preview</a>
+                    <a href="https://github.com/usmahm/Scooltec" target="_blank">View Code</a>
+                    <a href="https://scooltec.netlify.app/" target="_blank">Live Preview</a>
                   </div>
                 </div>
               </div>
             </li>
 
             <li class="project-item">
-              <div class="project-item__img covid"></div>
+              <div class="project-item__img soc-dash"></div>
 
               <div class="project-item__details">
                 <div class="project-item__details--about">
                   <div>
-                    <h3>Coronavirus Tracker</h3>
+                    <h3>Social Media Dashboard</h3>
                     <p>
                       Live Coronavirus cases website with map data
                       visualization.
@@ -448,30 +463,29 @@
                       <div>S</div>
                     </div>
                     <ul>
-                      <li>JAVASCRIPT</li>
-                      <li>AMCHARTS</li>
+                      <li>HTML 5</li>
+                      <li>CSS</li>
                       <div class="line-break"></div>
-                      <li>SCSS</li>
+                      <li>JAVASCRIPT</li>
                     </ul>
                   </div>
                   <div class="access">
-                    <a href="#">View Code</a>
-                    <a href="#">Live Preview</a>
+                    <a href="https://github.com/usmahm/FrontendMentor---Social-Media-Dashboard-with-Theme-Change" target="_blank">View Code</a>
+                    <a href="https://social-media-dashboard-with-theme-change.now.sh/" target="_blank">Live Preview</a>
                   </div>
                 </div>
               </div>
             </li>
 
             <li class="project-item to-right">
-              <div class="project-item__img covid"></div>
+              <div class="project-item__img world-time"></div>
 
               <div class="project-item__details">
                 <div class="project-item__details--about">
                   <div>
-                    <h3>Coronavirus Tracker</h3>
+                    <h3>World Timezones App</h3>
                     <p>
-                      Live Coronavirus cases website with map data
-                      visualization.
+                      A website which you can use to keep track of any timezone of your choice.
                     </p>
                   </div>
                 </div>
@@ -487,15 +501,15 @@
                     </div>
 
                     <ul>
-                      <li>JAVASCRIPT</li>
-                      <li>AMCHARTS</li>
+                      <li>HTML 5</li>
+                      <li>CSS</li>
                       <div class="line-break"></div>
-                      <li>SCSS</li>
+                      <li>JAVASCRIPT</li>
                     </ul>
                   </div>
                   <div class="access">
-                    <a href="#">View Code</a>
-                    <a href="#">Live Preview</a>
+                    <a href="https://github.com/usmahm/World-Clock-Web-App" target="_blank">View Code</a>
+                    <a href="https://world-clock-f.netlify.app" target="_blank">Live Preview</a>
                   </div>
                 </div>
               </div>
@@ -512,7 +526,7 @@
           <div class="about-me__text u-margin-top">
             <p>
               Ahmad Usman is a creative, self-motivated and passionate Front-End
-              Developer, passionate about writing clean and organized code, keen
+              Developer, passionate about writing clean and organized code, and keen
               on personal and professional development.
               <br />
               <br />
@@ -526,18 +540,17 @@
               <br />
               <br />
               When not coding, I'm either reading, writing articles, watching
-              movies or sleeping. Self development books are my number one
+              movies or sleeping : ). Self development books are my number one
               choices.
   
               <br />
               <br />
-              Space exploration, Machine Learning, AI are what I’m also very
-              ethusiastic about.
+              I'm also very ethusiastic about Space exploration, Machine Learning and AI.
   
               <br />
               <br />
-              I'm currently looking for opportunities where I can contribute my
-              skills and collaborate with a team on ambitious projects.
+              While Learning React JS framework, I'm open to and currently for opportunities 
+              where I can contribute my skills and collaborate with a team on ambitious projects. 
   
               <br />
               <br />
@@ -568,12 +581,13 @@
           <p>-- Just learn, &lt DoItForTheFuture /&gt.</p>
   
           <p>
-            Handcrafted by me © Ahmad Usman.
+            Handcrafted by Ahmad Usman.
             <br />
-            2020. All right reserved
+            © 2020. All right reserved.
           </p>
         </div>
       </div>
     </footer>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

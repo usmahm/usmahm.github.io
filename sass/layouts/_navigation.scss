@@ -42,29 +42,60 @@
 
       @include mobile-only {
         flex-direction: column;
-        transform: translateX(22vw);
+        transform: translateX(-50%);
+        position: absolute;
+        left: 50%;
       }
 
       .navigation__item {
+        position: relative;
+        overflow: hidden;
+        padding: 7px 0;
+
+        &:hover {
+          @include respond(tab-port) {
+            a {
+              transform: translateY(-150%);
+
+              &.link-coloured {
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+
         @include mobile-only {
           height: 36px;
           width: 90px;
           font-size: 1.3rem;
-          color: #64f4ac;
-          border: 2px solid #64f4ac;
+          color: $color-green;
+          border: 2px solid $color-green;
           border-radius: 13px;
           margin-bottom: 20px;
           font-weight: 600;
+          padding: 0;
 
           a {
             height: 100%;
-            width: 100%;
             @include centerContent;
+            width: 100%;
           }
         }
 
+        a {
+          transition: all .2s;
+
+          &.link-coloured {
+            position: absolute;
+            left: 0;
+            white-space: nowrap;
+            color: $color-green;
+            transform: translateY(150%);
+          }
+        }
       }
     }
+
     @include respond(tab-port) {
       display: block;
     }
@@ -168,8 +199,8 @@
   .bgr-cover {
     @include mobile-only {
       right: -55vw;
-  
-      height: 92vh;
+
+      height: 95vh;
       width: 55vw;
       position: absolute;
       top: 50%;
@@ -178,6 +209,8 @@
       background-color: #64f4ac;
       transition-delay: 2s;
       transition: all 2s;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
   }
 
@@ -201,28 +234,32 @@
       transform: translateX(-75vw);
     }
 
-    &__checkbox:checked ~  &__button &__button-icon {
+    &__checkbox:checked ~ &__button &__button-icon {
       background-color: transparent;
       .shoot {
+        background-color: $color-green;
         transform: translateX(10rem);
         transition: all 0.2s;
       }
     }
 
     &__checkbox:checked ~ &__button &__button-icon::before {
+      background-color: $color-green;
+      background-color: $color-green;
       top: 0;
       transform: rotate(135deg);
       width: 2.3rem;
     }
 
     &__checkbox:checked ~ &__button &__button-icon::after {
+      background-color: $color-green;
       top: 0;
       transform: rotate(-135deg);
       width: 2.3rem;
     }
 
     &__checkbox:checked ~ .wrapper .bgr-cover {
-      transform: translateY(-50%) translateX(-100vw);
+      transform: translateY(-50%) translateX(-125vw);
     }
 
     &__checkbox:checked ~ .wrapper &__nav {

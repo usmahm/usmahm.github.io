@@ -121,9 +121,23 @@
             background-color: $color-green;
             color: $dark-black-background;
             border-radius: 3px;
+            @include centerContent;
             //   margin-right: 0.5rem;
             &:first-of-type {
               margin-bottom: 0.5rem;
+            }
+
+            &:hover {
+                svg {
+                  transform: translateX(2px);
+                }
+            }
+
+            svg {
+              height: 1rem;
+              width: 1rem;
+              color:  #28292D;
+              transition: all .2s;
             }
           }
         }

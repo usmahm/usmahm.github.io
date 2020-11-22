@@ -39,7 +39,7 @@ section.stack {
   .design-line {
     &:first-of-type {
       top: 0;
-      right: 1.3rem;
+      right: -1.7rem;
 
       @include respond(tab-port) {
         right: 0;
@@ -47,12 +47,12 @@ section.stack {
     }
 
     &:last-of-type {
-      left: 3rem;
+      // left: 3rem;
       bottom: 0;
       background-color: $color-white;
+      left: 0;
 
       @include respond(tab-port) {
-        left: 0;
       }
     }
   }
@@ -78,7 +78,7 @@ section.projects {
   .design-line {
     &:first-of-type {
       top: 0;
-      right: 1.3rem;
+      right: -1.7rem;
 
       @include respond(tab-port) {
         right: 0;

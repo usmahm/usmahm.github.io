@@ -3,9 +3,19 @@
     &__text {
         font-size: 1.1rem;
 
-        p:not(:last-of-type) {
-            margin-bottom: 2.6rem;
+        p {
+            a {
+                color: $color-green;
+                
+                &:hover {
+                    color: #5aca92;
+                }
+            }
+            &:not(:last-of-type) {
+                margin-bottom: 2.6rem;
+            }
         }
+
 
         p.quote {
             margin-bottom: 0.6rem;

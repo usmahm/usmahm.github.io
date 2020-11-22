@@ -86,7 +86,7 @@
 
     &:hover {
       a {
-        transform: translateY(-100%);
+        transform: translateY(-115%);
         &.link-coloured {
           transform: translate(0, 0);
         }
@@ -108,7 +108,7 @@
       }
   
       &.link-coloured {
-        transform: translate(0, 100%);
+        transform: translate(0, 115%);
         color: $color-green;
       }
     }

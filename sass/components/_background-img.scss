@@ -6,10 +6,22 @@
     right: -1.5rem;
     bottom: -4rem;
 
+    @-moz-document url-prefix() {
+        & {
+            width: 60vw;
+        }
+    }
+    
     @include respond(tab-port) {
         transform: scale(1.3) rotate(-14deg);
         bottom: -1rem;
         right: 0;
+        
+        @-moz-document url-prefix() {
+            & {
+                width: 20vw;
+            }
+          }
       }
 
     svg {

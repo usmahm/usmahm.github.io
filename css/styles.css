@@ -529,11 +529,18 @@ section.intro .intro__main-content {
   height: 60vh;
   right: -1.5rem;
   bottom: -4rem; }
+
+@-moz-document url-prefix() {
+  .background-img {
+    width: 60vw; } }
   @media (min-width: 37.5em) {
     .background-img {
       transform: scale(1.3) rotate(-14deg);
       bottom: -1rem;
-      right: 0; } }
+      right: 0; }
+    @-moz-document url-prefix() {
+      .background-img {
+        width: 20vw; } } }
   .background-img svg {
     height: 100%;
     color: #2D2E32;
@@ -544,7 +551,6 @@ main.main {
   z-index: 10; }
 
 section.intro {
-  height: 100vh;
   background-color: #2D2E32; }
   @media (min-width: 37.5em) {
     section.intro {
@@ -805,7 +811,7 @@ footer.main-footer {
   @media (max-width: 37.5em) {
     .navigation .bgr-cover {
       right: -55vw;
-      height: 95vh;
+      height: 95%;
       width: 55vw;
       position: absolute;
       top: 50%;
@@ -820,7 +826,6 @@ footer.main-footer {
 @media (max-width: 37.5em) and (max-width: 37.5em) {
   .navigation .wrapper {
     width: 75vw;
-    height: 100vh;
     position: absolute;
     right: 0;
     right: -75vw;

@@ -374,6 +374,8 @@ section.intro .intro__main-content {
       background: url(../img/scooltec.png) top center/cover no-repeat; }
     .projects .project-item__img.soc-dash {
       background: url(../img/social-m-dashboard.png) top left/cover no-repeat; }
+    .projects .project-item__img.youtube {
+      background: url(../img/youtube.png) top left/cover no-repeat; }
     .projects .project-item__img.world-time {
       background: url(../img/w-c-web-app.png) top center/cover no-repeat; }
   .projects .project-item__details {
@@ -385,7 +387,7 @@ section.intro .intro__main-content {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1.5fr 1fr;
-    grid-template-areas: "about" "." "about2"; }
+    grid-template-areas: "about" "." "about2"; }
     .projects .project-item__details--about {
       padding: 0.8rem 1rem;
       background-color: #2D2E32;

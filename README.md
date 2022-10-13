@@ -1,6 +1,9 @@
-- 🔭 I’m currently working on my skills
-- 🌱 I’m currently learning React Js
-- 👯 I’m looking to collaborate on Projects
-- 📫 You can reach me via my email
+# Ahmad's Portfolio
 
-...README.md not yet in production
+This is the repository that contains code for my personal website
+
+## License
+
+Copyright © 2020 - present Ahmad Usman. All rights reserved
+
+**The code and media present in this repository remains an intellectual property of the individual metioned above and therefore CANNOT be copied, modified, redistributed, sublicenced or used as a template without due permission from the author.**

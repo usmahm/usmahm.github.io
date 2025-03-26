@@ -4,11 +4,11 @@
   "description": "Ahmad Usman Personal Site",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/styles.css -wr"
+    "compile:sass": "sass sass/main.scss css/styles.css --watch"
   },
   "author": "Ahmad Usman",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^5.0.0"
+    "sass": "^1.86.0"
   }
 }

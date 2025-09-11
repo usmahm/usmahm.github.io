@@ -33,25 +33,30 @@
       }
 
       &.soc-dash {
-        background: url(../img/social-m-dashboard.png) top left / cover no-repeat;
+        background: url(../img/social-m-dashboard.png) top left / cover
+          no-repeat;
       }
 
       &.youtube {
-        background: url(../img/youtube.png) top left / cover no-repeat;;
+        background: url(../img/youtube.png) top left / cover no-repeat;
+      }
+
+      &.sptms {
+        background: url(../img/sptms.png) top left / cover no-repeat;
       }
 
       &.world-time {
         background: url(../img/w-c-web-app.png) top center / cover no-repeat;
       }
-      
+
       &.smartnode {
         background: url(../img/smartnode.png) top center / cover no-repeat;
       }
-      
+
       &.hilaq {
         background: url(../img/hilaq.png) top center / cover no-repeat;
       }
-      
+
       filter: blur(1px);
       height: 100%;
       width: 100%;
@@ -140,16 +145,16 @@
             }
 
             &:hover {
-                svg {
-                  transform: translateX(2px);
-                }
+              svg {
+                transform: translateX(2px);
+              }
             }
 
             svg {
               height: 1rem;
               width: 1rem;
-              color:  #28292D;
-              transition: all .2s;
+              color: #28292d;
+              transition: all 0.2s;
             }
           }
         }

@@ -521,7 +521,8 @@ section.intro .intro__main-content .img-desk {
   flex-direction: column;
   align-items: flex-end;
 }
-.projects .project-item__details--about2 .access a {
+.projects .project-item__details--about2 .access a,
+.projects .project-item__details--about2 .access p.disabledlink {
   padding: 5px;
   background-color: #64F4AC;
   color: #2D2E32;
@@ -530,13 +531,16 @@ section.intro .intro__main-content .img-desk {
   justify-content: center;
   align-items: center;
 }
-.projects .project-item__details--about2 .access a:first-of-type {
+.projects .project-item__details--about2 .access a:first-of-type,
+.projects .project-item__details--about2 .access p.disabledlink:first-of-type {
   margin-bottom: 0.5rem;
 }
-.projects .project-item__details--about2 .access a:hover svg {
+.projects .project-item__details--about2 .access a:hover svg,
+.projects .project-item__details--about2 .access p.disabledlink:hover svg {
   transform: translateX(2px);
 }
-.projects .project-item__details--about2 .access a svg {
+.projects .project-item__details--about2 .access a svg,
+.projects .project-item__details--about2 .access p.disabledlink svg {
   height: 1rem;
   width: 1rem;
   color: #28292d;

@@ -132,7 +132,8 @@
           // justify-content: ;
           align-items: flex-end;
 
-          a {
+          a,
+          p.disabledlink {
             //   display: inline-block;
             padding: 5px;
             background-color: $color-green;

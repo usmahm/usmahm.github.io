@@ -474,6 +474,9 @@ section.intro .intro__main-content .img-desk {
 .projects .project-item__img.hilaq {
   background: url(../img/hilaq.png) top center/cover no-repeat;
 }
+.projects .project-item__img.endsars {
+  background: url(../img/endsars.png) top center/cover no-repeat;
+}
 .projects .project-item__details {
   height: 100%;
   width: 100%;
